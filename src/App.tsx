@@ -1,5 +1,7 @@
-const App = () => {
-    return(<h1>Hellow world!</h1>)
-}
+import { Box } from './components/box/Box';
+import { ExampleLayout } from './components/ExampleLayout/ExampleLayout';
 
-export default App
+export const App = () => {
+  // return <Box />;
+  return <ExampleLayout />;
+};
