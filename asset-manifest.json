@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/cargo-delivery-planner/static/css/main.ee3c7ca5.css",
-    "main.js": "/cargo-delivery-planner/static/js/main.bb50b636.js",
+    "main.js": "/cargo-delivery-planner/static/js/main.0b9e83a2.js",
     "index.html": "/cargo-delivery-planner/index.html",
     "main.ee3c7ca5.css.map": "/cargo-delivery-planner/static/css/main.ee3c7ca5.css.map",
-    "main.bb50b636.js.map": "/cargo-delivery-planner/static/js/main.bb50b636.js.map"
+    "main.0b9e83a2.js.map": "/cargo-delivery-planner/static/js/main.0b9e83a2.js.map"
   },
   "entrypoints": [
     "static/css/main.ee3c7ca5.css",
-    "static/js/main.bb50b636.js"
+    "static/js/main.0b9e83a2.js"
   ]
 }
