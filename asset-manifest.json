@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/aleksabramov77/cargo-delivery-planner/static/css/main.ee3c7ca5.css",
+    "main.js": "/aleksabramov77/cargo-delivery-planner/static/js/main.bb50b636.js",
+    "index.html": "/aleksabramov77/cargo-delivery-planner/index.html",
+    "main.ee3c7ca5.css.map": "/aleksabramov77/cargo-delivery-planner/static/css/main.ee3c7ca5.css.map",
+    "main.bb50b636.js.map": "/aleksabramov77/cargo-delivery-planner/static/js/main.bb50b636.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ee3c7ca5.css",
+    "static/js/main.bb50b636.js"
+  ]
+}
