@@ -2,7 +2,7 @@ import { Button, Table as AntdTable, AutoComplete } from 'antd';
 import 'antd/dist/antd.css';
 import './index.css';
 import { useAppDispatch, useAppSelector } from '../../hooks';
-import { Dispatch, ReactNode, useRef } from 'react';
+import { Dispatch, KeyboardEvent, ReactNode } from 'react';
 import {
   getGeocodeByAddress,
   resetEditedPoint,
@@ -11,7 +11,6 @@ import {
   setSelectedOrder,
 } from '../../redux/actions/actionCreators';
 import { ActionTypes } from '../../redux/actions/types';
-import { useClickAway } from 'react-use';
 
 type EditedCellType = (content: string, record: IData, index: number) => ReactNode;
 type EditedCellCreatorType = (type: 'origin' | 'destination') => EditedCellType;
@@ -95,11 +94,6 @@ interface IData {
 export const Table = () => {
   const { orders, autocomplete } = useAppSelector((state) => state.delivery);
   const dispatch = useAppDispatch();
-  const ref = useRef<HTMLDivElement>(null);
-
-  useClickAway(ref, () => {
-    dispatch(resetEditedPoint());
-  });
 
   const getDataSource = (): IData[] =>
     orders.map((i, index): IData & { key: number } => ({
@@ -112,10 +106,15 @@ export const Table = () => {
       autocomplete,
     }));
 
+  const handleKeyDown = (e: KeyboardEvent<HTMLDivElement>) => {
+    if (e.key === 'Escape') {
+      dispatch(resetEditedPoint());
+    }
+  };
+
   return (
-    <div>
+    <div onKeyDown={handleKeyDown}>
       <AntdTable
-        ref={ref}
         columns={columns}
         pagination={false}
         dataSource={getDataSource()}

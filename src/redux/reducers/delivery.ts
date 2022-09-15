@@ -69,7 +69,11 @@ export const delivery = (state = initialState, action: ActionTypes): IDeliverySt
     case 'RESET_EDITED_POINT': {
       return {
         ...state,
-        orders: state.orders.map((i, index) => ({
+        autocomplete: {
+          input: '',
+          predictions: [],
+        },
+        orders: state.orders.map((i) => ({
           ...i,
           points: Object.entries(i.points).reduce(
             (acc, [k, v]) => ({
@@ -89,6 +93,10 @@ export const delivery = (state = initialState, action: ActionTypes): IDeliverySt
       const { payload } = action;
       return {
         ...state,
+        autocomplete: {
+          input: '',
+          predictions: [],
+        },
         orders: state.orders.map((i, index) =>
           index === payload.index
             ? {

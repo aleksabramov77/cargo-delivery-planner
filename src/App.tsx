@@ -10,6 +10,7 @@ export const App = () => {
     googleMapsApiKey: String(process.env.REACT_APP_GOOGLE_API_KEY),
     libraries: ['places'],
   });
+
   return (
     <>
       <Split sizes={[35, 65]} direction="horizontal" cursor="col-resize" className="split-flex" minSize={[300, 800]}>
