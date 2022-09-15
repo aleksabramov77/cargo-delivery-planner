@@ -1,7 +1,4 @@
 import { combineReducers } from 'redux';
-import { createBrowserHistory } from 'history';
-import { addressRows } from './addressRows';
+import { delivery } from './delivery';
 
-export const history = createBrowserHistory();
-
-export const reducer = combineReducers({ addressRows });
+export const reducer = combineReducers({ delivery });

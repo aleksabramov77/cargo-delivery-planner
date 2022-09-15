@@ -1,9 +1,7 @@
-import React from 'react';
 import Split from 'react-split';
-import { DraggableTable } from './components/draggable-table';
+import { Table } from './components/table';
 import { Map } from './components/map';
 import './index.css';
-import { PlacesAutocomplete } from './components/places-autocomplete';
 import { useJsApiLoader } from '@react-google-maps/api';
 
 export const App = () => {
@@ -14,9 +12,8 @@ export const App = () => {
   });
   return (
     <>
-      <PlacesAutocomplete isLoaded={isLoaded} />
-      <Split sizes={[25, 75]} direction="horizontal" cursor="col-resize" className="split-flex" minSize={[300, 800]}>
-        <DraggableTable />
+      <Split sizes={[35, 65]} direction="horizontal" cursor="col-resize" className="split-flex" minSize={[300, 800]}>
+        <Table />
         <Map isLoaded={isLoaded} />
       </Split>
     </>

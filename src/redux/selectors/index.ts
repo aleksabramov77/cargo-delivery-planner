@@ -1,4 +1,6 @@
 import { RootState } from '../store';
-// import { NewsType } from '../reducers/news';
+import { IDeliveryOrder } from '../reducers/types';
 
-// export const getPathname = (store: RootState): NewsType[] => store.news.latestNews;
+export const getOrder = (store: RootState): IDeliveryOrder | undefined => store.delivery.orders.find((i) => i.selected);
+
+export const getAutocompleteInput = (store: RootState): string => store.delivery.autocomplete.input;
